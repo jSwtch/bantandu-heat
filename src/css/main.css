@@ -1,13 +1,22 @@
 /*
   You can use import statements to include partials:
  */
+
 @import "imports/reset.css";
-
-
 /*
   Or add your statements here:
  */
-body{
+
+@font-face {
+  font-family: 'SoulMission';
+  src: url('/fonts/SoulMission.ttf');
+}
+
+h1 {
+  font-family: 'SoulMission';
+}
+
+body {
   font-family: sans-serif;
   font-size: 1em;
   text-align: center;
