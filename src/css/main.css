@@ -9,11 +9,12 @@
 
 @font-face {
   font-family: 'SoulMission';
-  src: url('/fonts/SoulMission.ttf');
+  src: url('../fonts/SoulMission.ttf') format('truetype');
 }
 
 h1 {
   font-family: 'SoulMission';
+  font-size: 8em;
 }
 
 body {
