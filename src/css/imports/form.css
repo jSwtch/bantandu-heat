@@ -1,0 +1,242 @@
+form {
+  margin: 0 auto;
+  color: var(--color-cream);
+  width: 80%;
+  font-family: var(--font-sans);
+  font-size: calc(1.25em*1.2);
+  letter-spacing: .1em;
+  padding: calc(1.25em*2) calc(1.25em*2);
+  opacity: 1;
+}
+
+label.head {
+  display: block;
+  text-align: left;
+}
+
+.form--name--first, .form--radio--classic {
+  float: left;
+  width: 48%;
+}
+
+.form--name--last, .form--radio--mango {
+  float: right;
+  width: 48%;
+  margin-left: 4%;
+}
+
+/*
+TEXT INPUT
+*/
+
+.form--name input[type="text"], .form--email input[type="email"] {
+  width: 100%;
+}
+
+.form--message textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+form input, form textarea {
+  padding: calc(1.25em*.4) calc(1.25em*.2);
+  margin: calc(1.25em*1) 0;
+  background: var(--color-cream);
+  opacity: .7;
+}
+
+form input[type=text]:focus, form input[type=email]:focus, form textarea:focus {
+  opacity: 1;
+  outline: 6px solid var(--color-cream);
+}
+
+.placeholder-fix::-webkit-input-placeholder {
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.placeholder-fix::-moz-placeholder {
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.placeholder-fix:-moz-placeholder {
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.placeholder-fix:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.placeholder-fix:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.placeholder-fix:-moz-placeholder {
+  color: transparent;
+}
+
+/*
+RADIO
+*/
+
+.form--radio {
+  margin-top: calc(1.25em*1);
+}
+
+.form--radio span {
+  margin-left: calc(1.25em*.8);
+}
+
+form input[type="radio"] {
+  appearance: none;
+}
+
+.label--radio {
+  opacity: .8;
+  cursor: pointer;
+}
+
+input[type="radio"]~.label--radio:before {
+  font-family: var(--font-awesome);
+  display: inline-block;
+  content: "\f111";
+  font-size: 1.4em;
+  color: #535353;
+  width: 1.4em;
+  font-weight: 900;
+  opacity: .7;
+}
+
+input[type="radio"]:checked~.label--radio:before {
+  content: "\f192";
+  font-size: 1.4em;
+  color: var(--color-cream);
+}
+
+.label--radio:hover, input[type="radio"]~.label--radio:hover:before {
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+input[type="radio"]:focus~.label--radio {
+  opacity: 1;
+}
+input[type="radio"]:focus~.label--radio:before {
+  opacity: 1;
+}
+
+/*
+SLIDERS
+*/
+
+.form--slide {
+  margin-top: calc(1.25em*3.5);
+  width: 100%;
+}
+
+.form--slide--bottles {
+  margin-top: calc(1.25em*1);
+  width: 100%;
+}
+
+.form--slide--slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: calc(1.25em*1.25);
+  background: var(--color-cream);
+  outline: none;
+  opacity: 0.7;
+  width: 40%;
+  transition: opacity .3s ease;
+  transition: width .75s ease;
+}
+
+.form--slide--slider:hover {
+  width: 80%;
+  opacity: 1;
+}
+
+.form--slide--slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: calc(1.25em*1.5);
+  height: calc(1.25em*2.5);
+  background: var(--color-red);
+  cursor: pointer;
+}
+
+.form--slide--slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: red;
+  cursor: pointer;
+}
+
+.sliderUpdate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sliderUpdate--p {
+  color: #FFF;
+  width: 12%;
+  display: inline-block;
+  font-size: calc(1.25em*1.05);
+  opacity: .8;
+}
+
+input[type="range"] {
+  cursor: pointer;
+}
+input[type="range"]:focus {
+  opacity: 1;
+  width: 80%;
+  transition: all .3s ease;
+}
+
+/*
+SEND BUTTON
+*/
+
+.form--button {
+  text-align: center;
+}
+
+.btn {
+  padding: calc(1.25em*2);
+  color: var(--color-cream);
+  text-transform: uppercase;
+  background: var(--color-burnt);
+  opacity: .7;
+  outline: none;
+  border: .1em solid var(--color-cream);
+  border-radius: .25em;
+  transition: all .3s ease;
+}
+
+.btn:hover, .btn:focus {
+  opacity: 1;
+  color: var(--color-cream);
+  background: rgba(0, 0, 0, 1);
+}
+
+.btn:active {
+  padding-top: calc(1.175em*2);
+  padding-bottom: calc(1.175em*2);
+  opacity: 1;
+  color: var(--color-red);
+  background: rgba(0, 0, 0, 1);
+  border: .25em solid #4F1415;
+}

@@ -1,0 +1,37 @@
+.about {
+  background: var(--color-burnt);
+  color: var(--color-cream);
+  padding: calc(1.25em*3) 0 calc(1.25em*3) 0;
+}
+
+.about a {
+  text-decoration: none;
+  color: inherit;
+  transition: all .3s;
+}
+.about a:hover {
+  color: var(--color-yellow);
+  font-size: calc(1.25em*.86);
+}
+.about a:focus {
+  color: var(--color-yellow);
+  outline: none;
+  font-size: calc(1.25em*.86);
+}
+.about a:active {
+  color: var(--color-cream);
+}
+
+
+.img--ghost {
+  width: calc(160px+45vw);
+  float: left;
+  padding: 80px;
+  shape-outside: circle();
+}
+
+.text--ghost {
+  line-height: calc(1.25em*1.58);
+  font-size: calc(1.25em*1.2);
+  letter-spacing: .02em;
+}

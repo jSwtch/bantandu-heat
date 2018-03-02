@@ -1,0 +1,30 @@
+.contact {
+  background:url(../fire3.jpg)no-repeat 0 56% fixed;
+
+  /* background-image: url(../fire3.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; */
+  padding: calc(1.25em*6) 0;
+}
+
+
+
+.contact h2 {
+  color: var(--color-cream);
+}
+
+h2 small {
+  display: block;
+  font-family: var(--font-sans);
+  /* font-size: 1em; */
+}
+
+h2 span {
+  display: none;
+}
+
+.form--background {
+  padding: calc(1.25em*2) 0 0 0;
+  background: rgba(0, 0, 0, 0.85);
+}

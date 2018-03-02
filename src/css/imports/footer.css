@@ -1,0 +1,36 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.footer--logo h2{
+  font-family: var(--font-soul);
+}
+footer a {
+  opacity: 0.25;
+  transition: all .3s;
+}
+footer a:hover {
+  opacity: 0.5;
+}
+footer a:focus {
+  opacity: 0.5;
+  outline: none;
+}
+footer a:active {
+  opacity: 0.25;
+}
+
+.nav--title h2{
+  font-family: var(--font-soul);
+}
+
+.nav--bot {
+  background: rgba(0, 0, 0, 1);
+  padding: calc(1.25em*4) 0 calc(1.25em*2) 0;
+}
+.nav--bot span {
+  display: block;
+  font-family: var(--font-serif);
+}

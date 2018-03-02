@@ -1,0 +1,68 @@
+:root {
+  /* COLORS */
+  --color-cream: #fcfae2;
+  --color-burnt: #2a0f0f;
+  --color-burnt-red: #4F1415;
+  --color-red: #be2126;
+  --color-orange: #ee4535;
+  --color-orange2: #FBB432;
+  --color-yellow: #fdf06b;
+  /* background: var(--color-red); */
+  /* FONTS */
+  --font-soul: 'SoulMission';
+  --font-sans: 'Open Sans', 'Calibri', 'Droid Sans', 'Avenir', Helvetica, Arial, sans-serif;
+  --font-serif: 'Cardo', serif;
+  --font-awesome: "Font Awesome 5 Free";
+  /* font-family: var(--font-soul); */
+}
+
+@font-face {
+  font-family: 'SoulMission';
+  src: url('../fonts/SoulMission.ttf') format('truetype');
+}
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  font-family:var(--font-sans);
+  font-size: calc(1.25em*2);
+}
+
+h3 {
+  font-family: 'SoulMission', sans-serif;
+  font-size: calc(1.25em*2);
+}
+
+p {
+  font-family: 'Cardo', serif;
+  font-size: calc(1.25em);
+  line-height: 2em;
+}
+
+.wrapper {
+  max-width: 64em;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.wrapper--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.wrapper--flex__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,24 +1,9 @@
-/*
-  You can use import statements to include partials:
- */
-
 @import "imports/reset.css";
-/*
-  Or add your statements here:
- */
-
-@font-face {
-  font-family: 'SoulMission';
-  src: url('../fonts/SoulMission.ttf') format('truetype');
-}
-
-h1 {
-  font-family: 'SoulMission';
-  font-size: 8em;
-}
-
-body {
-  font-family: sans-serif;
-  font-size: 1em;
-  text-align: center;
-}
+@import "imports/admin.css";
+@import "imports/nav.css";
+@import "imports/home.css";
+@import "imports/sauces.css";
+@import "imports/about.css";
+@import "imports/contact.css";
+@import "imports/form.css";
+@import "imports/footer.css";

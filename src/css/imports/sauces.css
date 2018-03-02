@@ -1,0 +1,107 @@
+.sauces {
+  background: var(--color-cream);
+  color: var(--color-burnt);
+}
+
+.sauces--banner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: calc(-1.25em*2);
+
+}
+
+.sauces--banner__bot {
+  position: relative;
+  height: 10vw;
+}
+
+.sauces--title {
+  color: var(--color-burnt);
+  position: relative;
+  bottom: calc(1.25em*1.2);
+  margin-top: calc(1.25em*2);
+}
+
+.sauce--title {
+  text-align: center;
+  font-size: calc(1.25em*5.5);
+}
+
+.sauce--title__classic {
+  color: var(--color-red);
+}
+
+.sauce--title__mango {
+  color: var(--color-orange);
+}
+
+.wrapper__sauces {
+  max-width: 72em;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper__sauces__left {
+  left: 4em;
+}
+
+.wrapper__sauces__right {
+  right: 4em;
+}
+
+.sauces--box {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.sauces--img {
+  width: 60%;
+  height: 60%;
+}
+
+.sauces--text {
+  position: relative;
+  bottom: calc(1.25em*1.5);
+  line-height: calc(1.25em*1.58);
+  font-size: calc(1.25em*1.2);
+  letter-spacing: .02em;
+  text-indent: calc(1.25em*1.5);
+}
+
+.sauces--text__left {
+  padding-right: calc(1.25em*1);
+}
+
+.sauces--text__right {
+  padding-left: calc(1.25em*1);
+}
+
+.sauces--background--classic {
+  background: var(--color-cream);
+  color: var(--color-burnt);
+}
+
+.sauces--background--mango {
+  background: var(--color-cream);
+  color: var(--color-burnt);
+}
+
+.sauces--text a {
+  text-decoration: none;
+  color: inherit;
+  transition: all .3s;
+}
+.sauces--text a:hover {
+  color: var(--color-red);
+  font-size: calc(1.25em*.86);
+}
+.sauces--text a:focus {
+  color: var(--color-red);
+  outline: none;
+  font-size: calc(1.25em*.86);
+}
+.sauces--text a:active {
+  color: var(--color-burnt);
+}

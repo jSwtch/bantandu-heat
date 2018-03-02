@@ -1,0 +1,179 @@
+#home {
+  background: var(--color-cream);
+  top: 0;
+  height: 86vh;
+  min-height: calc(1.25em*30);
+  padding: calc(1.25em*2) calc(1.25em*2);
+}
+
+.wrapper--flavours {
+  position: absolute;
+  left: calc(1.25em*1.8);
+  top: calc(1.25em*16.75);
+  /* position: fixed; */
+  z-index: 2;
+}
+
+.flavours--flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(1.25em*8+10vw);
+}
+
+.flavours {
+  width: calc(1.25em*1.2);
+  height: calc(1.25em*1.2);
+  border: 1px solid rgba(0, 0, 0, .1);
+  transition: all .3s ease;
+}
+
+.flavours--text {
+  visibility: hidden;
+  padding: calc(1.25em*.2) calc(1.25em*.4);
+  color: #fff;
+  width: calc(1.25em*3);
+  display: inline-block;
+  background: #000;
+  opacity: .85;
+  text-align: center;
+  font-style: var(--font-sans);
+  font-size: calc(1.25em*.8);
+  left: 118%;
+  position: relative;
+}
+
+.flavours--1 {
+  background: var(--color-yellow);
+}
+
+.flavours--2 {
+  background: var(--color-orange2);
+}
+
+.flavours--3 {
+  background: var(--color-orange);
+}
+
+.flavours--4 {
+  background: var(--color-red);
+}
+
+.flavours--5 {
+  background: var(--color-burnt);
+}
+
+.flavours:hover .flavours--text {
+  visibility: visible;
+}
+
+.flavours:hover .flavours--text:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.flavours:hover {
+  width: calc(1.25em*2.2);
+  height: calc(1.25em*2.2);
+}
+
+.flavours:focus {
+  width: calc(1.25em*2.2);
+  height: calc(1.25em*2.2);
+  outline: none;
+}
+
+.wrapper--home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header--box {
+  text-align: center;
+}
+
+h1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: var(--font-soul);
+  font-size: calc(1.25em*8);
+  color: var(--color-burnt);
+}
+
+h1 small {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: calc(1.25em*.20);
+}
+
+h1 span {
+  display: none;
+}
+
+.bantandu--box {
+  width: 16vh;
+  min-width: calc(1.25em*30*.2);
+  position: absolute;
+  top: 26vh;
+  right: calc(1.25em*-1.0);
+  transition: right .4s ease;
+}
+
+.bantandu--box:hover {
+  right: 0;
+}
+
+.bantandu--box:focus {
+  right: 0;
+  outline: none;
+}
+
+/*
+BANTANDU SVG
+*/
+
+.st0 {
+  fill: none;
+}
+
+.st1 {
+  fill: var(--color-burnt);
+  transition: fill 0.6s ease;
+}
+
+.bantandu--half:hover .st1 {
+  fill: var(--color-burnt-red);
+}
+
+.button {
+  display: block;
+  border: none;
+  background-color: var(--color-red);
+  color: var(--color-cream);
+  padding: calc(1.25em*2) calc(1.25em*4);
+  border-radius: calc(1.25em*.1);
+  text-align: center;
+  font-family: var(--font-sans);
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.button:hover, .button:focus {
+  color: var(--color-cream);
+  background: var(--color-burnt-red);
+}
+
+.button:active {
+  color: var(--color-yellow);
+  background: var(--color-burnt);
+}

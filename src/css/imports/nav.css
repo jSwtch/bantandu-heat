@@ -1,0 +1,66 @@
+.nav {
+  background: var(--color-burnt);
+  width: 100%;
+  z-index: 2;
+}
+.nav-top {
+  /* position: fixed; */
+}
+
+.nav a {
+  color: var(--color-cream);
+}
+
+nav a {
+  opacity: 0.85;
+  transition: all .3s;
+}
+.nav--title:hover {
+  opacity: 1;
+}
+.nav--link:hover {
+  opacity: 1;
+  font-size: calc(1.25em*.86);
+}
+.nav--title:active, .nav--link:active {
+  opacity: 0.85;
+  outline: none;
+  font-size: calc(1.25em*.8);
+}
+nav a:focus {
+  color: var(--color-burnt);
+  background: var(--color-cream);
+  outline: none;
+}
+.nav--link__social:focus i {
+  color: var(--color-burnt);
+  background: var(--color-cream);
+  outline: none;
+}
+nav a:focus:hover, .nav--link__social:focus:hover i {
+  color: var(--color-cream);
+  background: var(--color-burnt);
+  outline: none;
+}
+
+
+.nav--title h2{
+  font-family: var(--font-soul);
+}
+
+.nav--menu {
+  font-family: var(--font-sans);
+  font-size: calc(1.25em*1);
+}
+
+.nav--menu li {
+  padding: 0 calc(1.25em*.8);
+}
+
+.nav--social li {
+  padding: 0 calc(1.25em*.2);
+}
+
+ul li {
+  display: inline-block;
+}
