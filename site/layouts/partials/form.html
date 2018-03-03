@@ -1,8 +1,8 @@
-<!-- <form action="https://formspree.io/hello@bantandu.com" method="post"> -->
+<form action="https://formspree.io/hello@bantandu.com" method="post">
 <form action="https://formcarry.com/s/HylPBIw_M" method="post">
   <div class="form--name">
     <div class="form--name--first">
-      <label class="head">First Name</label>
+      <label id="firstName" class="head">First Name</label>
       <input type="text" id="name" name="first_name" placeholder="First Name" class="placeholder-fix" required>
     </div>
     <div class="form--name--last">
@@ -46,8 +46,13 @@
   </div>
 
   <div class="form--button">
-    <input class="btn" type="submit" name="submit" value="Order Sauce">
+    <button id="submit" type="submit" name="submit" value="Order Sauce"  class="g-recaptcha btn" data-sitekey="6LfrLUoUAAAAAC2zkl3tWeno8EbKwLPvQQRUfh9u"
+      data-callback="YourOnSubmitFn">Order Sauce</button>
+
+    <!-- <input class="btn" type="submit" name="submit" value="Order Sauce"> -->
   </div>
+
+
 
 
 </form>
