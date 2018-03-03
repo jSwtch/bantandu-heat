@@ -21,10 +21,6 @@ sliderBottles.oninput = function() {
 }
 
 // GOOGLE INVISIBLE RECAPTCHA
-function onSubmit(token) {
-  alert('thanks ' + document.getElementById('firstName').value);
-}
-
 function validate(event) {
   event.preventDefault();
   if (!document.getElementById('firstName').value) {
