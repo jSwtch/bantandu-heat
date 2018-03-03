@@ -1,8 +1,5 @@
 // JS Goes here - ES6 supported
 
-// Say hello
-console.log("🦊 Hello! Edit me in src/js/app.js");
-
 // CONTACT FORM SLIDER UPDATE
 
 var sliderHeat = document.getElementById("myRange--heat");
@@ -16,8 +13,24 @@ var sliderBottles = document.getElementById("myRange--bottles");
 var outputBottles = document.getElementById("update--bottles");
 outputBottles.innerHTML = sliderBottles.value;
 
+
+// TOTAL COST FUNCTION
+var sliderBottles = document.getElementById("myRange--bottles");
+var outputTotal = document.getElementById("update--total");
+var total = 0;
+outputTotal.innerHTML = 35.89;
+
+
 sliderBottles.oninput = function() {
   outputBottles.innerHTML = this.value;
+
+//APPLY 11% DISCOUNT PER BOTTLE
+  for (var i = 0; i < this.value; i++) {
+    total += 18.99 * Math.pow(.89, i);
+  }
+
+  outputTotal.innerHTML = total.toFixed(2);
+  total = 0;
 }
 
 // GOOGLE INVISIBLE RECAPTCHA

@@ -34,9 +34,14 @@
   </div>
   <div class="form--slide form--slide--bottles">
     <label class="head" for="range">How many bottles?</label>
+
     <div class="sliderUpdate">
       <input type="range" min="1" max="5" value="2" class="form--slide--slider" id="myRange--bottles" name="bottle_order">
       <p class="sliderUpdate--p"><span id="update--bottles"></span></p>
+    </div>
+
+    <div class="totalUpdate">
+      <p>Total<span id="update--total" name="total_price" ></span></p>
     </div>
   </div>
 
@@ -48,9 +53,6 @@
   <div class="form--button">
     <div id='recaptcha' class="g-recaptcha" data-sitekey="6LfrLUoUAAAAAC2zkl3tWeno8EbKwLPvQQRUfh9u" data-callback="onSubmit" data-theme="dark"></div>
 
-    <button id="submit" type="submit" name="submit" value="Order Sauce" class="btn">Order Sauce</button>
+    <button id="submit" type="submit" value="Order Sauce" class="btn">Order Sauce</button>
   </div>
 </form>
-<script>
-  onload();
-</script>
