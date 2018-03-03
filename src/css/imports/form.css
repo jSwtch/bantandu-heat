@@ -210,11 +210,8 @@ input[type="range"]:focus {
 SEND BUTTON
 */
 
-.form--button {
-  text-align: center;
-}
-
 .btn {
+  margin-top: calc(1.25em*1);
   padding: calc(1.25em*2);
   color: var(--color-cream);
   text-transform: uppercase;
@@ -241,6 +238,6 @@ SEND BUTTON
   border: .25em solid #4F1415;
 }
 
-.grecaptcha-badge {
-  appearance:none;
+.form--button {
+  text-align: center;
 }
