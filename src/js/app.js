@@ -21,13 +21,13 @@ sliderBottles.oninput = function() {
 }
 
 // GOOGLE INVISIBLE RECAPTCHA
-function YourOnSubmitFn(token) {
-  alert('thanks' + getElementById('firstName').value)
+function onSubmit(token) {
+  alert('thanks ' + document.getElementById('firstName').value);
 }
 
 function validate(event) {
   event.preventDefault();
-  if (!document.getElementById('field').value) {
+  if (!document.getElementById('firstName').value) {
     alert("You must add text to the required field");
   } else {
     grecaptcha.execute();
