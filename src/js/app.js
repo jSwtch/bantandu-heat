@@ -26,7 +26,7 @@ sliderBottles.oninput = function() {
 
 //APPLY 11% DISCOUNT PER BOTTLE
   for (var i = 0; i < this.value; i++) {
-    total += 18.99 * Math.pow(.89, i);
+    total += 18.99 * Math.pow(.90, i);
   }
 
   outputTotal.innerHTML = total.toFixed(2);
