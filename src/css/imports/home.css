@@ -1,17 +1,33 @@
 #home {
   background: var(--color-cream);
-  top: 0;
-  height: 86vh;
-  min-height: calc(1.25em*30);
   padding: calc(1.25em*2) calc(1.25em*2);
+  height: 79vh;
+  @media (min-width: 75em) {
+    top: 0;
+    height: 86vh;
+    min-height: calc(1.25em*30);
+  }
+}
+.wrapper--home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .wrapper--flavours {
+  display: none;
   position: absolute;
   left: calc(1.25em*1.8);
   top: calc(1.25em*16.75);
+  z-index: 2;
   /* position: fixed; */
   z-index: 2;
+  @media (min-width: 75em) {
+    display: block;
+    /* position: fixed; */
+  }
 }
 
 .flavours--flex {
@@ -89,35 +105,23 @@
   outline: none;
 }
 
-.wrapper--home {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .header--box {
   text-align: center;
 }
 
-h1 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  font-family: var(--font-soul);
-  font-size: calc(1.25em*8);
-  color: var(--color-burnt);
+.bantandu--small {
+  width: 8em;
+  margin-top: calc(1.25em*5);
+  @media (min-width: 75em) {
+    display: none;
+  }
 }
 
-h1 small {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: calc(1.25em*.20);
-}
-
-h1 span {
+.bantandu--large {
   display: none;
+  @media (min-width: 75em) {
+    display: block;
+  }
 }
 
 .bantandu--box {
@@ -142,30 +146,51 @@ h1 span {
 BANTANDU SVG
 */
 
-.st0 {
-  fill: none;
+#bantandu {
+  width: 50vh;
 }
 
-.st1 {
+#bantandu .st0 {
   fill: var(--color-burnt);
   transition: fill 0.6s ease;
 }
 
-.bantandu--half:hover .st1 {
+#bantandu:hover .st0 {
   fill: var(--color-burnt-red);
 }
+
+#bantandu--half .st0 {
+  fill: none;
+}
+
+#bantandu--half .st1 {
+  fill: var(--color-burnt);
+  transition: fill 0.6s ease;
+}
+
+#bantandu--half:hover .st1 {
+  fill: var(--color-burnt-red);
+}
+
+/*
+BUTTON
+*/
 
 .button {
   display: block;
   border: none;
   background-color: var(--color-red);
   color: var(--color-cream);
-  padding: calc(1.25em*2) calc(1.25em*4);
   border-radius: calc(1.25em*.1);
   text-align: center;
   font-family: var(--font-sans);
   text-decoration: none;
   transition: all .3s ease;
+  padding: calc(1.25em*1) calc(1.25em*2);
+  @media (min-width: 75em) {
+    padding: calc(1.25em*2) calc(1.25em*4);
+    margin: calc(1.25em*4) 0;
+  }
 }
 
 .button:hover, .button:focus {

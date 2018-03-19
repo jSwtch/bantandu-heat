@@ -1,66 +1,214 @@
-.nav {
+header {
+  display: flex;
+  align-items: center;
   background: var(--color-burnt);
+  padding: calc(1.25em*0) 0;
+}
+
+.logo {
+  margin: 0 1em;
+  font-size: calc(1.25em*1.5);
+  color: var(--color-cream);
+  padding: calc(1.25em*.5);
+  opacity: 0.85;
+}
+
+/* Screen reader only */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Button styling */
+
+.menu-toggle {
+  color: var(--color-cream);
+  padding: 1em;
+  line-height: 1em;
+  font-size: calc(1.25em);
+  opacity: 0.85;
+  transition: all .3s ease;
+}
+
+.menu-toggle:hover, .menu-toggle:focus {
+  color: var(--color-yellow);
+  opacity: 1;
+}
+.menu-toggle:active {
+  color: var(--color-cream);
+  opacity: 0.85;
+}
+
+/*
+ Default styles + Mobile first
+ Offscreen menu style
+*/
+
+.main-menu {
+  position: absolute;
+  left: 0;
+  top: -600px;
   width: 100%;
-  z-index: 2;
-}
-.nav-top {
-  /* position: fixed; */
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 
-.nav a {
+.main-menu ul {
+  margin: 0;
+  list-style: none;
+  padding: 3.85em 0 0;
+  /* Hide shadow w/ -8px while 'closed' */
+  -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
+  -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
+  box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
+  width: 100%;
+  background: var(--color-black);
+}
+
+.main-menu a {
+  display: block;
+  padding: calc(1.25em*.65) 1.25em;
+  line-height: 1em;
+  font-size: calc(1.25em);
   color: var(--color-cream);
-}
-
-nav a {
-  opacity: 0.85;
-  transition: all .3s;
-}
-.nav--title:hover {
-  opacity: 1;
-}
-.nav--link:hover {
-  opacity: 1;
-  font-size: calc(1.25em*.86);
-}
-.nav--title:active, .nav--link:active {
-  opacity: 0.85;
-  outline: none;
-  font-size: calc(1.25em*.8);
-}
-nav a:focus {
-  color: var(--color-burnt);
-  background: var(--color-cream);
-  outline: none;
-}
-.nav--link__social:focus i {
-  color: var(--color-burnt);
-  background: var(--color-cream);
-  outline: none;
-}
-nav a:focus:hover, .nav--link__social:focus:hover i {
-  color: var(--color-cream);
-  background: var(--color-burnt);
-  outline: none;
-}
-
-
-.nav--title h2{
-  font-family: var(--font-soul);
-}
-
-.nav--menu {
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-burnt);
   font-family: var(--font-sans);
-  font-size: calc(1.25em*1);
 }
 
-.nav--menu li {
-  padding: 0 calc(1.25em*.8);
+.main-menu li:first-child a {
+  border-top: 1px solid var(--color-burnt);
 }
 
-.nav--social li {
-  padding: 0 calc(1.25em*.2);
+.main-menu a:hover, .main-menu a:focus {
+  background: var(--color-burnt);
+  text-decoration: none;
 }
 
-ul li {
-  display: inline-block;
+.main-menu .menu-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
+  padding: 1em;
+  line-height: 1em;
+  font-size: calc(1.25em);
+  width: 100%;
+}
+
+/*
+ On small devices, allow it to toggle...
+*/
+
+/*
+ :target for non-JavaScript
+ aria-expanded="true/false" will be for JavaScript
+*/
+
+.main-menu:target, .main-menu[aria-expanded="true"] {
+  left: 0;
+  top: 0;
+  outline: none;
+  -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
+  -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
+  box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
+}
+
+.main-menu:target .menu-close, .main-menu[aria-expanded="true"] .menu-close {
+  z-index: 1001;
+}
+
+.main-menu:target ul, .main-menu[aria-expanded="true"] ul {
+  position: relative;
+  z-index: 1000;
+}
+
+/*
+ We could us `.main-menu:target:after`, but
+ it wouldn't be clickable.
+*/
+
+.main-menu:target+.backdrop, .main-menu[aria-expanded="true"]+.backdrop {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: #000;
+  background: rgba(0, 0, 0, .85);
+  cursor: default;
+}
+
+@supports (position: fixed) {
+  .main-menu, .main-menu:target+.backdrop, .main-menu[aria-expanded="true"]+.backdrop {
+    position: fixed;
+  }
+}
+
+/*
+ Larger screen styling
+ Horizontal menu
+*/
+
+@media (min-width: 768px) {
+  .menu-toggle, .main-menu .menu-close {
+    display: none;
+  }
+  /* Undo positioning of off-canvas menu */
+  .wrapper--nav {
+    max-width: 87.5em;
+    margin: 0 auto;
+  }
+  .main-menu {
+    position: relative;
+    left: auto;
+    top: auto;
+    height: auto;
+  }
+  .main-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Undo off-canvas styling */
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height: auto;
+    width: auto;
+    background: none;
+  }
+  .main-menu a {
+    color: var(--color-cream);
+    border: none !important;
+    opacity: 0.85;
+    transition: all 0.3s ease;
+    line-height: 1em;
+    padding: calc(1.25em*.5) calc(1.25em*.25);
+    /* Remove borders from off-canvas styling */
+  }
+
+  .main-menu a:hover {
+    background: none;
+    /* Remove background from off-canvas styling */
+    opacity: 1;
+  }
+  .main-menu a:focus {
+    background: none;
+    /* Remove background from off-canvas styling */
+    opacity: 0.85;
+  }
+  .nav {
+    display: flex;
+  }
 }

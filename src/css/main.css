@@ -1,5 +1,6 @@
 @import "imports/reset.css";
 @import "imports/admin.css";
+@import "imports/mixins.css";
 @import "imports/nav.css";
 @import "imports/home.css";
 @import "imports/sauces.css";

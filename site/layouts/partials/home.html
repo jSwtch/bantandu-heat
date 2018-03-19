@@ -1,25 +1,31 @@
 <section id="home">
 
-  <div class="wrapper wrapper--home">
+  <div class="wrapper--home">
+
     <div class="wrapper--flavours">
       <div class="flavours--flex">
         <div class="flavours flavours--1"><span class="flavours--text">top secret</span></div>
         <a href="#mango" class="flavours flavours--2">
       <span class="flavours--text">Mango Madness</span></a>
         <div class="flavours flavours--3">
-          <span class="flavours--text">not telling</span></div>
+          <span class="flavours--text">incoming 2019</span></div>
         <a href="#classic" class="flavours flavours--4">
       <span class="flavours--text">Cult Classic</span></a>
         <div class="flavours flavours--5">
           <span class="flavours--text">October release</span></div>
       </div>
     </div>
+
+    <a href="#about" class="bantandu--small">
+      {{ partial "bantandu" . }}
+    </a>
+
     <h1>Bantandu<small><span>-</span>Heat Products of the Golden Age</small></h1>
 
     <a class="button" href="#contact">Order Now</a>
 
   </div>
-  <a href="#about" class="bantandu--box">
+  <a href="#about" class="bantandu--box bantandu--large">
     {{ partial "bantandu-half" . }}
 </a>
 
