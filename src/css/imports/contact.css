@@ -1,14 +1,15 @@
 .contact {
-  background:url(../fire3.jpg)no-repeat 0 56% fixed;
-
-  /* background-image: url(../fire3.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center; */
+  background: url(../fire3.jpg)no-repeat 0 56% fixed;
   padding: calc(1.25em*6) 0;
 }
 
-
+.wrapper--contact {
+  margin: 0 auto;
+  height: 100%;
+  @media (min-width: 48em) {
+    max-width: 64em;
+  }
+}
 
 .contact h2 {
   color: var(--color-cream);

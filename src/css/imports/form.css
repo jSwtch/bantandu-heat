@@ -3,10 +3,14 @@ form {
   color: var(--color-cream);
   width: 80%;
   font-family: var(--font-sans);
-  font-size: calc(1.25em*1.2);
+  font-size: calc(1.25em*1);
   letter-spacing: .1em;
   padding: calc(1.25em*2) calc(1.25em*2);
   opacity: 1;
+  @media (min-width: 37.5em) {
+      font-size: calc(1.25em*1.25);
+      letter-spacing: .1em;
+  }
 }
 
 label.head {

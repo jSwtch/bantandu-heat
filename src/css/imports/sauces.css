@@ -7,8 +7,13 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: calc(-1.25em*2);
-
+  margin-top: calc(-1.25em*.85);
+  @media (min-width: 48em) {
+    margin-top: calc(-1.25em*1.3);
+  }
+  @media (min-width: 75em) {
+    margin-top: calc(-1.25em*2);
+  }
 }
 
 .sauces--banner__bot {
@@ -21,11 +26,26 @@
   position: relative;
   bottom: calc(1.25em*1.2);
   margin-top: calc(1.25em*2);
+  padding-bottom: calc(1.25em*1);
+  margin: 0;
+  padding-top: calc(1.25em*2);
+  @media (min-width: 75em) {
+
+  }
 }
 
 .sauce--title {
   text-align: center;
-  font-size: calc(1.25em*5.5);
+  font-size: calc(1.25em*3);
+  padding: 0;
+  margin-bottom: calc(1.25em*.5);
+  @media (min-width: 48em) {
+    margin-bottom: 0;
+  }
+  @media (min-width: 75em) {
+    font-size: calc(1.25em*5.5);
+    margin-bottom: calc(1.25em*.5);
+  }
 }
 
 .sauce--title__classic {
@@ -37,45 +57,96 @@
 }
 
 .wrapper__sauces {
-  max-width: 72em;
   margin: 0 auto;
+  height: 100%;
   position: relative;
+  max-width: 24em;
+  @media (min-width: 48em) {
+    max-width: 44em;
+  }
+  @media (min-width: 75em) {
+    max-width: 76em;
+
+  }
 }
 
 .wrapper__sauces__left {
-  left: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  @media (min-width: 75em) {
+    left: -4em;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+.wrapper__sauces__left p{
+  @media (min-width: 75em) {
+    padding-left: calc(1.25em*2);
+  }
 }
 
 .wrapper__sauces__right {
-  right: 4em;
-}
-
-.sauces--box {
   display: flex;
   justify-content: space-between;
-  align-items: top;
+  align-items: center;
+  flex-direction: column;
+  @media (min-width: 75em) {
+    right: -4em;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+  }
+}
+.wrapper__sauces__right p{
+  @media (min-width: 75em) {
+    padding-right: calc(1.25em*2);
+  }
 }
 
 .sauces--img {
-  width: 60%;
-  height: 60%;
+  width: 200%;
+  max-width: 80vw;
+  padding-bottom: calc(1.25em*2);
+  @media (min-width: 48em) {
+    width: 100%;
+    padding: calc(1.25em*2) 0;
+    max-width: 75vw;
+  }
+  @media (min-width: 75em) {
+    width: 60%;
+    height: 60%;
+    padding: 0;
+  }
+}
+.calendar {
+  margin: -40px 0 -80px 0;
 }
 
 .sauces--text {
+  text-align: center;
   position: relative;
   bottom: calc(1.25em*1.5);
-  line-height: calc(1.25em*1.58);
-  font-size: calc(1.25em*1.2);
+  line-height: calc(1.25em*1.42);
+  font-size: calc(1.25em*1.05);
   letter-spacing: .02em;
-  text-indent: calc(1.25em*1.5);
+  @media (min-width: 75em) {
+    /* text-indent: calc(1.25em*1.5); */
+    line-height: calc(1.25em*1.58);
+    font-size: calc(1.25em*1.2);
+  }
 }
 
 .sauces--text__left {
-  padding-right: calc(1.25em*1);
+  @media (min-width: 75em) {
+    padding-right: calc(1.25em*1);
+  }
 }
 
 .sauces--text__right {
-  padding-left: calc(1.25em*1);
+  @media (min-width: 75em) {
+    padding-left: calc(1.25em*1);
+  }
 }
 
 .sauces--background--classic {
@@ -93,15 +164,18 @@
   color: inherit;
   transition: all .3s;
 }
+
 .sauces--text a:hover {
   color: var(--color-red);
   font-size: calc(1.25em*.86);
 }
+
 .sauces--text a:focus {
   color: var(--color-red);
   outline: none;
   font-size: calc(1.25em*.86);
 }
+
 .sauces--text a:active {
   color: var(--color-burnt);
 }
