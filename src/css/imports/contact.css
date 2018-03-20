@@ -1,7 +1,7 @@
 .contact {
   background: url(../fire3.jpg)no-repeat 0 56% fixed;
   padding: calc(1.25em*6) 0;
-  background-size: cover !important;
+  background-size: cover;
 }
 
 .wrapper--contact {
